@@ -1,0 +1,24 @@
+[project]
+name = "pokemon-assistant"
+version = "0.1.0"
+description = "Asistente de debilidades Pokémon para partidas en emulador"
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.32",
+    "rapidfuzz>=3.9",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.setuptools]
+py-modules = ["main"]
+
+[tool.setuptools.packages.find]
+include = ["domain*", "ports*", "adapters*", "service*", "controller*", "scripts*"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"

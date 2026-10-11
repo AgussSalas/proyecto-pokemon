@@ -1,0 +1,4 @@
+generation = 3
+
+[abilities]
+mode = "canonical"  # canonical | randomized | off
